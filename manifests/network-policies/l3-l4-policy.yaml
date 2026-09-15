@@ -1,0 +1,17 @@
+apiVersion: "cilium.io/v2"
+kind: CiliumNetworkPolicy
+metadata:
+  name: allow-iperf3-client-to-server
+  namespace: default
+spec:
+  endpointSelector:
+    matchLabels:
+      app: iperf3-server
+  ingress:
+  - fromEndpoints:
+    - matchLabels:
+        app: iperf3-client
+    toPorts:
+    - ports:
+      - port: "5201"
+        protocol: TCP

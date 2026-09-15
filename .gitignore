@@ -1,0 +1,9 @@
+*.pyc
+*.kubeconfig
+kubeconfig
+kubeconfig.yaml
+*.pem
+*.key
+.env
+*.swp
+*.swo

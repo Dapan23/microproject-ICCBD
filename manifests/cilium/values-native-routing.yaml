@@ -1,0 +1,13 @@
+routingMode: native
+tunnelProtocol: disabled
+
+ipv4NativeRoutingCIDR: "10.244.0.0/16"
+
+ipam:
+  mode: "cluster-pool"
+  operator:
+    clusterPoolIPv4PodCIDRList:
+      - "10.244.0.0/16"
+
+autoDirectNodeRoutes: true
+kubeProxyReplacement: false
